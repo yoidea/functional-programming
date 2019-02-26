@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-pipeline-operator": "^7.3.2"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-pipeline-operator",
+        {
+          "proposal": "minimal"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "build": "babel -o out.js"
+  }
+}
