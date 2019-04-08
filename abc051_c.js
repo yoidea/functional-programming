@@ -1,0 +1,10 @@
+const stdin = require("fs").readFileSync("/dev/stdin", "utf8");
+const [sx, sy, tx, ty] = stdin.split(" ").map(Number);
+const diff = (x1, x2) => x2 - x1;
+const dx = diff(sx, tx);
+const dy = diff(sy, ty);
+let result = "U".repeat(dy) + "R".repeat(dx);
+result += "D".repeat(dy) + "L".repeat(dx);
+result += "L".repeat(1) + "U".repeat(dy + 1) + "R".repeat(dx + 1) + "D".repeat(1);
+result += "R".repeat(1) + "D".repeat(dy + 1) + "L".repeat(dx + 1) + "U".repeat(1);
+console.log(result);
